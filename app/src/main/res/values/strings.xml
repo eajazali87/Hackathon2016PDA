@@ -1,0 +1,29 @@
+<resources>
+    <!-- Home Activity -->
+    <string name="app_name">Hackathon2016 PDA</string>
+
+    <string name="home_header_message"> Welcome to PDA Hackathon!!</string>
+    <string name="get_started_message">This is a simple app to add, view and delete the participants data \n\n</string>
+    <string name="home_activity_button">Click to proceed...</string>
+
+    <!-- add Participants Info -->
+    <string name="add_participants_info_header">add_participants_info_header</string>
+    <string name="user_name_edit_text">user_name_edit_text</string>
+    <string name="project_name_edit_text">project_name_edit_text</string>
+    <string name="add_participant">add_participant</string>
+    <string name="add_participant_text">Add Participant</string>
+    <string name="edit_message">edit_message</string>
+    <string name="navigate_to_view_participants_text">Next > </string>
+
+    <!-- View Participants Info -->
+    <string name="view_participants_info_header">view_participants_info_header</string>
+    <string name="view_participants">view_participants</string>
+    <string name="view_participants_text">View Participants</string>
+    <string name="display_participants_list">Display Participants List</string>
+    <string name="navigate_to_delete_participants_text">Next > </string>
+
+    <!-- Delete Participants Info -->
+    <string name="delete_participants_info_header">delete_participants_info_header</string>
+    <string name="delete_participants">delete_participants_text</string>
+    <string name="delete_participants_text">Delete Participants..</string>
+</resources>

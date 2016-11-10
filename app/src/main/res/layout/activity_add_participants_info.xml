@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hackathon2016pda.AddParticipantsInfo"
+    android:background="#CCFFFF">
+
+    <TextView android:id="@+id/enter_participants_info_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Enter the participants info"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textStyle="italic|bold"
+        android:textColor="@color/colorForText"
+        android:textSize="24sp" />
+
+    <EditText android:id="@+id/user_name_edit_text"
+        android:layout_below="@id/enter_participants_info_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="participant name" />
+
+    <EditText
+        android:id="@+id/project_name_edit_text"
+        android:layout_below="@id/user_name_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="project name"
+        android:elevation="11dp"
+        android:inputType="none" />
+
+    <Button
+        android:id="@+id/add_participant"
+        android:layout_below="@id/project_name_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/add_participant_text" />
+
+    <Button
+        android:id="@+id/navigate_to_view_participants"
+        android:layout_centerInParent="true"
+        android:textAllCaps="false"
+        android:layout_below="@id/project_name_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/navigate_to_view_participants_text"
+        android:onClick="navigateToViewParticipants" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/pearson_logo"
+        android:background="@color/colorForFooter"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_delete_participants"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCFFFF"
+    tools:context="com.example.hackathon2016pda.DeleteParticipants">
+
+    <TextView android:id="@+id/delete_participants_info_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Delete the participants info"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textStyle="italic|bold"
+        android:textColor="@color/colorForText"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/delete_participants"
+        android:layout_below="@+id/delete_participants_info_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/delete_participants_text" />
+
+    <Button
+        android:id="@+id/back_to_view_participants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Back "
+        android:layout_marginStart="11dp"
+        android:layout_marginBottom="59dp"
+        android:layout_alignParentBottom="true"
+        android:onClick="navigateToViewParticipants"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/pearson_logo"
+        android:background="@color/colorForFooter"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
