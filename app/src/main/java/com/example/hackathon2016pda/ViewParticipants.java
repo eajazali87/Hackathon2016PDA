@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,7 +36,15 @@ public class ViewParticipants extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_participants);
-        Toast.makeText(getBaseContext(), "Click to view the participants data...", Toast.LENGTH_LONG).show();
+        final Handler handler = new Handler();
+        final Toast toast = Toast.makeText(getBaseContext(), "Click to view the participants data...", Toast.LENGTH_LONG);
+        toast.show();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                toast.cancel();
+            }
+        }, 1000);
         VIEW_PARTICIPANTS = (Button) findViewById(R.id.view_participants);
         LIST_PARTICIPANTS_NAME = (ListView) findViewById(R.id.display_participants_name_list);
         LIST_PROJECT_NAME = (ListView) findViewById(R.id.display_project_name_list);
@@ -69,6 +78,12 @@ public class ViewParticipants extends AppCompatActivity {
     public void navigateToDeleteParticipants(View view) {
         // Do something in response to button
         Intent intent = new Intent(this, DeleteParticipants.class);
+        startActivity(intent);
+    }
+
+    public void navigateToAddParticipants(View view) {
+        // Do something in response to button
+        Intent intent = new Intent(this, AddParticipantsInfo.class);
         startActivity(intent);
     }
 }

@@ -3,6 +3,8 @@ package com.example.hackathon2016pda;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +20,20 @@ public class DeleteParticipants extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete_participants);
-        Toast.makeText(getBaseContext(), "Click to delete the participants data...", Toast.LENGTH_LONG).show();
+        final Handler handler = new Handler();
+
+        final Toast toast = Toast.makeText(getBaseContext(), "Click to delete the participants data...", Toast.LENGTH_LONG);
+        View view = toast.getView();
+        view.setBackgroundColor(Color.RED);
+        toast.setView(view);
+        toast.show();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                toast.cancel();
+            }
+        }, 1000);
+
         DELETE_PARTICIPANTS = (Button) findViewById(R.id.delete_participants);
 
         DELETE_PARTICIPANTS.setOnClickListener(new View.OnClickListener() {
@@ -34,7 +49,6 @@ public class DeleteParticipants extends AppCompatActivity {
     }
 
     public void navigateToViewParticipants(View view) {
-        // Do something in response to button
         Intent intent = new Intent(this, ViewParticipants.class);
         startActivity(intent);
     }
